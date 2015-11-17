@@ -1,0 +1,25 @@
+<dataConfig>
+      <dataSource type="JdbcDataSource"
+                driver="com.mysql.jdbc.Driver"
+                url="jdbc:mysql://localhost:3306/haalthy"
+                user="root"
+                password="" /> 
+          <document>
+              <entity name="product" pk="post" query="select PostID as 'id', body, Tags, Type, InsertUserName, CountComments, CountBookmarks, CountViews, Closed, IsBroadcast, DateInserted, DateUpdated, isActive, displayname from post, user where post.InsertUserName = user.username;">
+                <field column="id" name="id" />
+                <field column="body" name="body" />
+                <field column="Tags" name="Tags" />
+                <field column="Type" name="Type" />
+                <field column="InsertUserName" name="InsertUserName" />
+                <field column="CountComments" name="CountComments" />
+                <field column="CountBookmarks" name="CountBookmarks" />
+                <field column="CountViews" name="CountViews" />
+                <field column="Closed" name="Closed" />
+                <field column="IsBroadcast" name="IsBroadcast" />
+                <field column="DateInserted" name="DateInserted" />
+                <field column="DateUpdated" name="DateUpdated" />
+                <field column="isActive" name="isActive" />
+                <field column="displayname" name="displayname" />
+              </entity>
+          </document>
+</dataConfig>
